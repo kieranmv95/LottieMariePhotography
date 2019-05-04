@@ -1,0 +1,23 @@
+@import "../../sass/partials/variables";
+
+.nav {
+  padding: 0 15px;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background: $color-primary;
+}
+
+.nav ul {
+
+}
+
+.nav ul li {
+
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: $color-black;
+}
