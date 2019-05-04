@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import styles from "./styles.module.scss";
+import styles from "./styles.module.scss"
 
 const Navigation = () => (
   <nav className={styles.nav}>
