@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Navigation from "../Navigation"
 import { Link } from "gatsby";
+
 import cx from "classnames";
 import styles from "./styles.module.scss";
 
@@ -24,7 +25,9 @@ const Header = ({
         <span></span>
         <span></span>
       </div>
-      <Navigation />
+      <div className={cx(styles.headerNav, navActive && styles.headerNavActive)}>
+        <Navigation />
+      </div>
     </header>
   )
 }

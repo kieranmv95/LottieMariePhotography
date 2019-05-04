@@ -1,3 +1,11 @@
+@import "../../../node_modules/include-media/dist/include-media";
+
+$breakpoints: (
+  tablet: 768px,
+  large: 1024px,
+  desktop: 1200px,
+);
+
 $font-family: 'Montserrat', sans-serif;
 $font-base: 16px;
 

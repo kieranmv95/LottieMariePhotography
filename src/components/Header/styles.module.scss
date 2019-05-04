@@ -1,6 +1,9 @@
 @import "../../sass/partials/variables";
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
   display: grid;
   height: 40px;
   grid-template-columns: 40px 40px;
@@ -9,6 +12,9 @@
   padding: 0 15px;
   font-size: 1.125em;
   background: $color-primary;
+  @include media(">=tablet") {
+    grid-template-columns: 40px auto;
+  }
 }
 
 .headerLink {
@@ -48,6 +54,7 @@
     width: calc(50% - 10px);
     transform: rotate(0deg);
   }
+  @include media(">=tablet") { display: none; }
 }
 
 .headerToggleActive {
@@ -66,4 +73,17 @@
     width: calc(100% - 10px);
     transform: rotate(-45deg);
   }
+}
+
+.headerNav > nav {
+  transition: .3s ease-in-out;
+  transform: translateX(-100%);
+  @include media(">=tablet") {
+    transition: initial;
+    transform: translateX(0%);
+  }
+}
+
+.headerNavActive > nav {
+  transform: translateX(0%);
 }
