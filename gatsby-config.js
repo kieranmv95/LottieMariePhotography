@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    titleShort: `LMP`,
     title: `Lottie Marie Photography`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@kieranmv95`,
@@ -26,6 +27,14 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Montserrat']
+        }
+      }
     },
     `gatsby-plugin-sass`,
   ],

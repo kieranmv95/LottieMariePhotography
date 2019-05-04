@@ -1,21 +1,35 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from "react"
+import Navigation from "../Navigation"
+import { Link } from "gatsby";
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <div>
-      <h1><Link to="/">{siteTitle}</Link></h1>
-    </div>
-  </header>
-)
+import cx from "classnames";
+import styles from "./styles.module.scss";
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+const Header = ({
+  siteTitleShort
+}) => {
+  const [navActive, setNavActive] = useState(false);
 
-Header.defaultProps = {
-  siteTitle: ``,
+  return (
+    <header className={styles.header}>
+      <Link to="/" className={styles.headerLink}>
+        {siteTitleShort}
+      </Link>
+      <div
+        className={
+          cx(styles.headerToggle, navActive && styles.headerToggleActive)
+        }
+        onClick={() => setNavActive(!navActive)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div className={cx(styles.headerNav, navActive && styles.headerNavActive)}>
+        <Navigation />
+      </div>
+    </header>
+  )
 }
 
 export default Header

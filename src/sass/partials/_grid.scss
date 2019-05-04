@@ -1,0 +1,10 @@
+.container {
+  padding: 0 15px;
+  @include media(">=tablet") {
+    display: block;
+    margin: 0 auto;
+    width: 720px;
+  }
+  @include media(">=large") { width: 960px; }
+  @include media(">=desktop") { width: 1024px; }
+}

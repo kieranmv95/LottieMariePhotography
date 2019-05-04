@@ -2,13 +2,13 @@ import React from "react"
 import Layout from "../../components/Layout"
 import SEO from "../../components/Seo"
 
-const ContactPage = () => (
+const AboutPage = () => (
   <Layout>
     <SEO title="Contact" keywords={[`Contact`]} />
     <div className="container">
-      <h1>Contact</h1>
+      <h1>About</h1>
     </div>
   </Layout>
 )
 
-export default ContactPage
+export default AboutPage

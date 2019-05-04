@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "../Header"
@@ -11,14 +10,14 @@ const Layout = ({ children }) => (
       query SiteTitleQuery {
         site {
           siteMetadata {
-            title
+            titleShort
           }
         }
       }
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitleShort={data.site.siteMetadata.titleShort} />
         <div>
           <main>{children}</main>
           <footer>Footer</footer>
@@ -27,9 +26,5 @@ const Layout = ({ children }) => (
     )}
   />
 )
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout

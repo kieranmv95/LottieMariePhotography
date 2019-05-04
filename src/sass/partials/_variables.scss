@@ -1,0 +1,16 @@
+@import "../../../node_modules/include-media/dist/include-media";
+
+$breakpoints: (
+  tablet: 768px,
+  large: 1024px,
+  desktop: 1200px,
+);
+
+$font-family: 'Montserrat', sans-serif;
+$font-base: 16px;
+
+// https://flatuicolors.com/palette/us
+$color-black:         rgb(19, 19, 19);
+$color-white:         rgb(243, 243, 243);
+$color-primary:       #a29bfe;
+$color-primary-dark:  #6c5ce7;
